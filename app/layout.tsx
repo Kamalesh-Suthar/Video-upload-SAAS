@@ -16,7 +16,14 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      appearance={{
+        layout: {
+          animations: true,
+          socialButtonsVariant: "iconButton",
+        },
+      }}
+    >
       <html lang="en">
         <body className={inter.className}>{children}</body>
       </html>
